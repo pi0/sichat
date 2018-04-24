@@ -3,6 +3,7 @@ version: '2'
 services:
   app:
     image: banian/node
+    command: yarn && yarn start
     volumes:
       - .:/usr/src/app    
     restart: always
