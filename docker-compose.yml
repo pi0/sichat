@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  app:
+    image: banian/node
+    volumes:
+      - .:/usr/src/app    
+    restart: always
