@@ -59,10 +59,12 @@ class BaseController extends Controller {
   }
 
   async addResponse(request, message) {
-    request.yar.get('responses').push({
+    const responses = request.yar.get('responses');
+    responses.push({
       message,
       date: Date.now(),
     });
+    request.yar.set('responses', responses);
   }
 
   async support(request) {
