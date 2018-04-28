@@ -1,6 +1,13 @@
 module.exports = {
   routes: ['./controllers/index.js'],
   registrations: ['yar', 'inert', 'vision', 'hapi-swagger'],
+  server: {
+    routes: {
+      cors: {
+        origin: 'ignore',
+      },
+    },
+  },
   yar: {
     maxCookieSize: 0,
     cookieOptions: {
